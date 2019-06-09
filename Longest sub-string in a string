@@ -1,0 +1,21 @@
+longest=''#empty string to compare with
+i=0
+sub_str=s[i]#first character in a sub-string
+
+while i<(len(s)-1):
+    if s[i]<=s[i+1]:
+        sub_str+=s[i+1]
+        i+=1
+    elif len(sub_str)>len(longest):
+        longest=sub_str
+        i+=1
+        sub_str=s[i]
+    else:
+        i+=1
+        sub_str=s[i]
+        
+if len(sub_str)>len(longest):#for checking the last sub-string when while loop ends
+    longest=sub_str
+    print("This is my answer"+longest)
+else:
+    print("This is my answer "+longest)
