@@ -1,0 +1,37 @@
+print('Please think of an integer number between 0 and 100(exclusive)')
+low = 0
+high = 100
+guess = (low + high) / 2
+
+print('Is your secret number ' + str(guess) + '?')
+hint = input("Enter 'h' to indicate the guess is too high.Enter 'l' to indicate the guess is too low.Enter 'c' to indicate I guessed correctly. ")
+while True:
+    if hint=='h':
+        high=guess
+        guess=int((low+high)/2)
+        print('Is your secret number ' + str(guess) + '?')
+        hint = input(
+            "Enter 'h' to indicate the guess is too high.Enter 'l' to indicate the guess is too low.Enter 'c' to indicate I guessed correctly. ")
+
+    elif hint=='l':
+        low = guess
+        guess = int((low + high) /2)
+        print('Is your secret number ' + str(guess) + '?')
+        hint = input(
+            "Enter 'h' to indicate the guess is too high.Enter 'l' to indicate the guess is too low.Enter 'c' to indicate I guessed correctly. ")
+
+    elif hint == 'c':
+        print('Game Over!Your secret number is:' + str(guess))
+        break
+
+    else:
+        print('I do not understand that input.')
+        print('Is your secret number ' + str(guess) + '?')
+        hint = input(
+            "Enter 'h' to indicate the guess is too high.Enter 'l' to indicate the guess is too low.Enter 'c' to indicate I guessed correctly. ")
+
+
+
+
+
+
