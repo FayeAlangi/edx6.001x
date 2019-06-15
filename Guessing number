@@ -1,4 +1,5 @@
 print('Please think of an integer number between 0 and 100(exclusive)')
+
 low = 0
 high = 100
 guess = (low + high) / 2
