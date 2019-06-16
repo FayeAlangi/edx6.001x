@@ -1,0 +1,11 @@
+month=0
+interest=0
+
+while month<12:
+    min_pay=balance*monthlyPaymentRate
+    unpaid_bal=balance-min_pay
+    interest=unpaid_bal*annualInterestRate/12
+    balance=round((unpaid_bal+interest),2)
+    month+=1
+    #print('Month {} Remaining Balance is:{}'.format(month,balance))
+print('Remaining balance:',balance)
