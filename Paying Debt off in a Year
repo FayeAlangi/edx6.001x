@@ -8,4 +8,5 @@ while month<12:
     balance=round((unpaid_bal+interest),2)
     month+=1
     #print('Month {} Remaining Balance is:{}'.format(month,balance))
+    
 print('Remaining balance:',balance)
