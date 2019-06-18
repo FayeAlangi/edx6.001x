@@ -1,0 +1,20 @@
+original_balance=balance
+monthlyInterestRate = annualInterestRate / 12
+epsilon=0.1
+
+lower = round(balance/12,2) 
+upper = round((balance * (1 + monthlyInterestRate) ** 12) / 12,2)
+
+while True:
+    pay=round((lower+upper)/2,2)
+    balance=original_balance
+    for month in range(12):
+        balance = (balance - pay) * (1 + monthlyInterestRate)
+    if balance>0 and balance>epsilon:
+            lower = pay
+    elif balance<0 and balance<-epsilon:
+            upper= pay
+    else:
+        print(pay)
+        break
+     
