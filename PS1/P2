@@ -1,0 +1,9 @@
+#Find frequency of bob occuring in a string
+count=0
+index_pos=s.find('b')
+for char in s[index_pos:]:
+    if s[index_pos:index_pos+3]=='bob':
+        count+=1
+    index_pos=index_pos+1
+
+print(count)
