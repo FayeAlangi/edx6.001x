@@ -1,0 +1,13 @@
+def find_substring(s,sub_s):
+    ''' 
+    input: s is a string, sub_s is a sub-string of s
+    output: number of times sub_s is in s
+    '''
+    
+    counter=0
+    start_index=s.find(sub_s)
+    while start_index <= len(s)-len(sub_s):
+        if s[start_index:start_index+len(sub_s)]==sub_s:
+            counter+=1
+        start_index+=1
+    return counter
