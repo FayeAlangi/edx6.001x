@@ -11,7 +11,7 @@ def count_vowels(s):
             counter+=s.count(vowel)
     return('Number of vowels: '+str(counter))
     
-#version 2:using list comprehension
+#version 2: using list comprehension
 def count_vowels(s):
     '''
     input: a string
@@ -20,7 +20,7 @@ def count_vowels(s):
     list_vowels=[vowel for vowel in 'aeiou' if vowel in s]
     return f'Number of vowels: {len(list_vowels)}'
     
-#version 3:using recursion
+#version 3: using recursion
 def count_vowels(s):
     if not s: #base case of recursion
         return 0 
