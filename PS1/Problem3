@@ -1,0 +1,25 @@
+# Finding the longest substring in a string
+def longest(s):
+
+    longest=''
+    i=0
+    sub_str=s[i]
+
+    while i<(len(s)-1):
+        if s[i]<=s[i+1]:
+          sub_str+=s[i+1]
+          i+=1
+        elif len(sub_str)>len(longest):
+          longest=sub_str
+          i+=1
+          sub_str=s[i]
+        else:
+          i+=1
+          sub_str=s[i]
+
+
+  if len(sub_str)>len(longest):
+    longest=sub_str
+  return f'Longest substring in alphabetical order is: {longest}'
+
+
