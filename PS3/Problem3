@@ -1,0 +1,20 @@
+#Solution 1
+def getAvailableLetters(lettersGuessed):
+    '''
+    lettersGuessed: list, what letters have been guessed so far
+    returns: string, comprised of letters that represents what letters have not
+      yet been guessed.
+    '''
+    # FILL IN YOUR CODE HERE...
+    
+    returned_string=''
+    for letter in string.ascii_lowercase:
+        if letter not in lettersGuessed:
+            returned_string+=letter
+    return returned_string
+
+
+
+#Solution 2
+def getAvailableLetters(lettersGuessed):
+    return "".join(sorted(list(set(string.ascii_lowercase) - set(lettersGuessed))))
