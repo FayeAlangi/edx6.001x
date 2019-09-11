@@ -1,0 +1,27 @@
+#Solution 1
+int = annualInterestRate / 12
+bal = 1
+payment = 0
+
+while bal > 0:
+    bal = balance
+    payment += 10
+    for i in range(12):
+        bal = ((bal - payment) * (1 + int))
+
+print("Lowest Payment: {:0.2f}".format(payment))
+
+
+#Solution 2
+original_bal=balance
+fixed_pay=10
+
+while True:
+    for i in range(12):
+        balance=(balance-fixed_pay)*(1+annualInterestRate/12)
+    if balance<=0:
+        print(fixed_pay)
+        break
+    else:
+        fixed_pay+=10
+        balance=original_bal
