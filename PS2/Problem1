@@ -1,0 +1,23 @@
+#Solution 1
+intst = annualInterestRate / 12
+bal = balance
+pay = monthlyPaymentRate
+
+for i in range(12):
+    bal *= (1 - pay) * (1 + intst)
+
+print("Remaining balance: {:0.2f}".format(bal))
+
+#Solution 2
+# Paste your code into this box
+month=0
+interest=0
+
+while month<12:
+    min_pay=balance*monthlyPaymentRate
+    unpaid_bal=balance-min_pay
+    interest=unpaid_bal*annualInterestRate/12
+    balance=round((unpaid_bal+interest),2)
+    month+=1
+    #print('Month {} Remaining Balance is:{}'.format(month,balance))
+print('Remaining balance:',balance)
